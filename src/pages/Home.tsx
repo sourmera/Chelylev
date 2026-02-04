@@ -125,7 +125,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen selection:bg-primary/20">
+    <div className="min-h-screen selection:bg-primary/20 overflow-x-hidden w-full">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center text-center" data-testid="section-hero">
         <div className="absolute inset-0 z-0">
