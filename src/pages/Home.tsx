@@ -1,5 +1,11 @@
 import logoImg from "@/img/logo.png";
 import heroImg from "@/img/soleil.JPG";
+import feilleImg from "@/img/feille.jpg";
+import natureRivierFeille from "@/img/natureRivierFeille.jpg";
+import rivierCaillou from "@/img/rivierCaillou.jpg";
+import allone from "@/img/allone.jpg";
+import imgfooter from "@/img/imgfooter.png";
+import room from "@/img/room.jpg";
 import { useState, useEffect } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
@@ -39,13 +45,13 @@ import { apiRequest } from "@/lib/queryClient";
 import { insertContactSchema } from "@shared/schema";
 
 const heroImage = heroImg;
-const feature1 = "https://cdn.ailandingpage.ai/landingpage_io/user-generate/3706901d-71b8-466b-b92c-c547ec57641e/3706901d-71b8-466b-b92c-c547ec57641e/features/features-1-ae1ef5d2a75e4534b0e0b895db61b9a8.png";
-const feature2 = "https://cdn.ailandingpage.ai/landingpage_io/user-generate/3706901d-71b8-466b-b92c-c547ec57641e/3706901d-71b8-466b-b92c-c547ec57641e/features/features-2-33187eef7dd7484fab73fdca0794a31b.png";
-const feature3 = "https://cdn.ailandingpage.ai/landingpage_io/user-generate/3706901d-71b8-466b-b92c-c547ec57641e/3706901d-71b8-466b-b92c-c547ec57641e/features/features-3-5b6402d461444efcb875b25b7a63c98b.png";
+const feature1 = allone
+const feature2 = room
+const feature3 = feilleImg;
 const benefitsImage = "https://cdn.ailandingpage.ai/landingpage_io/user-generate/3706901d-71b8-466b-b92c-c547ec57641e/3706901d-71b8-466b-b92c-c547ec57641e/benefits/benefits-main-6e2dc194ebb240ba8cff811ab91c96fb.png";
-const testimonial1 = "https://cdn.ailandingpage.ai/landingpage_io/user-generate/3706901d-71b8-466b-b92c-c547ec57641e/3706901d-71b8-466b-b92c-c547ec57641e/testimonials/testimonials-1-798a84de0d5c4564a50fa1554240b668.png";
-const testimonial2 = "https://cdn.ailandingpage.ai/landingpage_io/user-generate/3706901d-71b8-466b-b92c-c547ec57641e/3706901d-71b8-466b-b92c-c547ec57641e/testimonials/testimonials-2-3d507b112e214e8ea8213b3c24abb939.png";
-const ctaImage = "https://cdn.ailandingpage.ai/landingpage_io/user-generate/3706901d-71b8-466b-b92c-c547ec57641e/3706901d-71b8-466b-b92c-c547ec57641e/cta/cta-main-2477ed77efe74b0787d81951e8e32b66.png";
+const testimonial1 = natureRivierFeille
+const testimonial2 = rivierCaillou
+const ctaImage = imgfooter;
 
 const contactFormSchema = insertContactSchema.extend({
   name: z.string().min(2, "שם חייב להכיל לפחות 2 תווים"),
@@ -223,9 +229,9 @@ export default function Home() {
           
           <div className="grid md:grid-cols-3 gap-10">
             {[
-              { img: feature1, icon: Eye, title: "זיהוי נורות אדום", text: "למידה לזהות מנגנוני שליטה ודפוסים רעילים שמופעלים עליך - כדי שלא תיפלי בהם שוב", testId: "card-feature-1" },
+              { img: feature1, icon: Eye, title: "זיהוי נקודות אדומות", text: "למידה לזהות מנגנוני שליטה ודפוסים רעילים שמופעלים עליך - כדי שלא תיפלי בהם שוב", testId: "card-feature-1" },
               { img: feature2, icon: HandHeart, title: "תמיכה רגשית מלאה", text: "מרחב בטוח ולא שיפוטי, מתוך ניסיון אישי ומקצועי עמוק - כאן לא צריך \"להיות חזקות\"", testId: "card-feature-2" },
-              { img: feature3, icon: Sparkles, title: "שינוי פנימי מיידי", text: "תחושת מסוגלות ושינוי פנימי כבר מהמפגש הראשון - לא עוד שיחה רגילה אלא התחלה של חיים חדשים", testId: "card-feature-3" }
+              { img: feature3, icon: Sparkles, title: "שינוי פנימי מהותי", text: "תחושת מסוגלות ושינוי פנימי כבר מהמפגש הראשון - לא עוד שיחה רגילה אלא התחלה של חיים חדשים", testId: "card-feature-3" }
             ].map((f, i) => (
               <motion.div
                 key={i}
@@ -369,7 +375,7 @@ export default function Home() {
                 name: "שרה מ.",
                 role: "גרושה, אמא לשניים",
                 img: testimonial1,
-                quote: "אחרי 3 שנים של קשר רעיל, הגעתי לחלי מותשת לחלוטין. חשבתי שאני משוגעת, שאני זו שגורמת לכל הבעיות. הפגישה הראשונה החינמית פתחה לי את העיניים - הבנתי שאני לא לבד ושיש דרך החוצה. התהליך עם חלי החזיר לי את עצמי, את הביטחון שלי ואת השמחה.",
+                quote: "אחרי 3 שנים של קשר רעיל, הגעתי לחלי מותשת לחלוטין. חשבתי שאני משוגעת, שאני זו שגורמת לכל הבעיות.הפגישה הראשונה פתחה לי את העיניים - הבנתי שאני לא לבד ושיש דרך החוצה. התהליך עם חלי החזיר לי את עצמי, את הביטחון שלי ואת השמחה.",
                 time: "שינוי מלא תוך 4 חודשים"
               },
               {
