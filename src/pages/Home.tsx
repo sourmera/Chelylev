@@ -196,7 +196,7 @@ export default function Home() {
               <Button 
                 size="lg" 
                 className="text-lg px-10 py-7 rounded-full shadow-lg shadow-primary/20 transition-all hover:scale-105 active:scale-95"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
                 data-testid="button-hero-cta"
               >
                 קבעי פגישה ראשונה עכשיו
@@ -354,7 +354,7 @@ export default function Home() {
                 </p>
                 <Button 
                   className="rounded-full px-8 py-4 text-base shadow-lg shadow-primary/20 hover:scale-105 transition-transform"
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   התחילי את המסע שלך עוד היום
                 </Button>
@@ -420,11 +420,18 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mt-16"
+            className="text-center mt-16 flex flex-col items-center gap-8"
           >
             <p className="text-1xl md:text-2xl font-bold text-primary">
               מעל 200 נשים כבר בחרו לשחרר עצמן
             </p>
+            <Button 
+              size="lg" 
+              className="rounded-full px-10 py-6 text-lg shadow-xl shadow-primary/20 hover:scale-105 transition-transform"
+              onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              הצטרפי אליהן - קבעי פגישה עכשיו
+            </Button>
           </motion.div>
         </div>
       </section>
@@ -510,7 +517,7 @@ export default function Home() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
             >
-              <Card className="p-10 border-none shadow-2xl bg-background rounded-[2rem]" data-testid="card-contact-form">
+              <Card id="contact-form" className="p-10 border-none shadow-2xl bg-background rounded-[2rem]" data-testid="card-contact-form">
                 <h3 className="text-2xl font-bold mb-8 text-center">קבעי את הפגישה שלך עכשיו</h3>
                 
                 <Form {...form}>
