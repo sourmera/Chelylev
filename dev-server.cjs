@@ -10,8 +10,8 @@ app.use(express.json());
 
 app.post('/api/contact', async (req, res) => {
   const { name, email, phone, message } = req.body;
-  const user = process.env.EMAIL_USER=contact@chelylev.com
-  const pass = process.env.EMAIL_PASS=123456aA@@
+  const user = process.env.EMAIL_USER=chlylev@gmail.com
+  const pass = process.env.EMAIL_PASS=123456aA@
 
   console.log('\n--- TENTATIVE D\'ENVOI ---');
   
@@ -31,7 +31,7 @@ app.post('/api/contact', async (req, res) => {
 
     await transporter.sendMail({
       from: `"Contact Site" <${user}>`,
-      to: "chelylev@gmail.com",
+      to: "chlylev@gmail.com",
       replyTo: email,
       subject: `Message de ${name}`,
       text: `Nom: ${name}\nEmail: ${email}\nTéléphone: ${phone}\nMessage: ${message}`,
