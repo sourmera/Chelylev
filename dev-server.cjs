@@ -10,8 +10,8 @@ app.use(express.json());
 
 app.post('/api/contact', async (req, res) => {
   const { name, email, phone, message } = req.body;
-  const user = process.env.EMAIL_USER;
-  const pass = process.env.EMAIL_PASS;
+  const user = process.env.EMAIL_USER=contact@chelylev.com;
+  const pass = process.env.EMAIL_PASS=123456aA@@;
 
   console.log('\n--- TENTATIVE D\'ENVOI ---');
   
@@ -22,11 +22,11 @@ app.post('/api/contact', async (req, res) => {
 
   try {
     const transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
-      port: 465,
-      secure: true,
-      auth: { user, pass },
-      tls: { rejectUnauthorized: false }
+      service: 'gmail',
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
+      }
     });
 
     await transporter.sendMail({
