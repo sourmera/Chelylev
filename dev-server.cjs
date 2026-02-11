@@ -10,8 +10,8 @@ app.use(express.json());
 
 app.post('/api/contact', async (req, res) => {
   const { name, email, phone, message } = req.body;
-  const user = process.env.EMAIL_USER;
-  const pass = process.env.EMAIL_PASS;
+  const user = process.env.EMAIL_USER=contact@chelylev.com
+  const pass = process.env.EMAIL_PASS=123456aA@@
 
   console.log('\n--- TENTATIVE D\'ENVOI ---');
   
