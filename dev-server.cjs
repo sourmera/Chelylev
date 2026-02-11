@@ -22,7 +22,7 @@ app.post('/api/contact', async (req, res) => {
 
   try {
     const transporter = nodemailer.createTransport({
-      host: 'mail.chelylev.com',
+      host: 'mail.gmail.com',
       port: 465,
       secure: true,
       auth: { user, pass },
@@ -31,7 +31,7 @@ app.post('/api/contact', async (req, res) => {
 
     await transporter.sendMail({
       from: `"Contact Site" <${user}>`,
-      to: "contact@chelylev.com",
+      to: "chelylev@gmail.com",
       replyTo: email,
       subject: `Message de ${name}`,
       text: `Nom: ${name}\nEmail: ${email}\nTéléphone: ${phone}\nMessage: ${message}`,
