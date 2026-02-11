@@ -22,7 +22,7 @@ app.post('/api/contact', async (req, res) => {
 
   try {
     const transporter = nodemailer.createTransport({
-      host: 'mail.gmail.com',
+      host: 'smtp.gmail.com',
       port: 465,
       secure: true,
       auth: { user, pass },
